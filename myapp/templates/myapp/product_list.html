@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Список продуктов</h2>
+  <ul>
+    {% for product in products %}
+      <li>
+        <strong>{{ product.name }}</strong> (Автор: {{ product.creator }}, Уроков: {{ product.lesson_set.count }})
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

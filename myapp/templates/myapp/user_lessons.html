@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Lessons</title>
+</head>
+<body>
+    <h2>User: {{ user.name }}</h2>
+    <h3>Lessons:</h3>
+    <ul>
+        {% for lesson in lessons %}
+            <li>{{ lesson.name }} - {{ lesson.video_url }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
